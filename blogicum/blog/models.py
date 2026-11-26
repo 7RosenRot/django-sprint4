@@ -100,7 +100,7 @@ class Post(PublishedModel):
         verbose_name = 'публикация'
         verbose_name_plural = 'Публикации'
         ordering = ('-pub_date', '-id')
-    
+
     def __str__(self):
         return self.title
 
