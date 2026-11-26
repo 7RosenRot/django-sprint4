@@ -29,7 +29,7 @@ def get_posts_queryset(queryset=None, only_published=True):
         )
     return queryset.annotate(
         comment_count=Count('comments'),
-    ).order_by('-pub_date')
+    ).order_by('-pub_date', '-id')
 
 
 def paginate_queryset(request, queryset, per_page=POSTS_PER_PAGE):
